@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="8.0.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2465,22 +2465,6 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 &lt;/table&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;</description>
 <packages>
-<package name="R1206">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
-<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
-<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
-<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
-<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
-<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
-</package>
 <package name="CT7343">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;&lt;p&gt;
 chip
@@ -2827,16 +2811,16 @@ Please make sure your boards conform to these design rules.</description>
 </autorouter>
 <elements>
 <element name="BAT+" library="wirepad" package="SMD1,27-2,54" value="" x="2.54" y="7.62" smashed="yes" rot="R90">
-<attribute name="VALUE" x="2.54" y="7.62" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="3.67" y="6.82" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="2.54" y="7.62" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="BTN1" library="wirepad" package="SMD1,27-2,54" value="" x="24.13" y="8.89" smashed="yes" rot="R90">
-<attribute name="VALUE" x="24.13" y="8.89" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="25.26" y="8.09" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.13" y="8.89" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="BTN2" library="wirepad" package="SMD1,27-2,54" value="" x="24.13" y="6.35" smashed="yes" rot="R90">
-<attribute name="VALUE" x="24.13" y="6.35" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="25.26" y="5.55" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.13" y="6.35" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="C1" library="resistor" package="CT7343" value="100µF" x="2.8575" y="19.685" smashed="yes" rot="R270">
 <attribute name="NAME" x="1.27" y="23.65375" size="0.4064" layer="25" rot="R90"/>
@@ -2863,28 +2847,24 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="20.32" y="34.29" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="COIL" library="wirepad" package="4,16O1,6" value="" x="11.14425" y="34.25825" smashed="yes">
-<attribute name="VALUE" x="11.14425" y="34.25825" size="0.0254" layer="27"/>
 <attribute name="NAME" x="12.85425" y="36.45825" size="0.4064" layer="25"/>
-</element>
-<element name="GND_LCD" library="wirepad" package="SMD1,27-2,54" value="" x="6.35" y="2.54" smashed="yes">
-<attribute name="VALUE" x="6.35" y="2.54" size="0.0254" layer="27"/>
-<attribute name="NAME" x="5.118" y="3.924" size="0.4064" layer="25" rot="R270"/>
+<attribute name="VALUE" x="11.14425" y="34.25825" size="0.0254" layer="27"/>
 </element>
 <element name="GND_LED" library="wirepad" package="SMD1,27-2,54" value="" x="24.13" y="35.56" smashed="yes" rot="R90">
-<attribute name="VALUE" x="24.13" y="35.56" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="25.60925" y="36.95075" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.13" y="35.56" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="IC1" library="atmega8" package="TQFP32-08" value="ATMEGA48/88/168-AU" x="16.51" y="15.24" smashed="yes" rot="R180">
 <attribute name="VALUE" x="19.5326" y="16.51" size="0.8128" layer="27" rot="R180"/>
 </element>
 <element name="IC2" library="TP4056" package="SOP-8" value="TP4056" x="8.255" y="9.2075" smashed="yes" rot="R90"/>
 <element name="LED1" library="wirepad" package="SMD1,27-2,54" value="" x="24.13" y="30.48" smashed="yes" rot="R90">
-<attribute name="VALUE" x="24.13" y="30.48" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="25.514" y="31.7755" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.13" y="30.48" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="LED2" library="wirepad" package="SMD1,27-2,54" value="" x="24.13" y="33.02" smashed="yes" rot="R90">
-<attribute name="VALUE" x="24.13" y="33.02" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="25.514" y="34.3155" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.13" y="33.02" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="Q1" library="transistor-power" package="D-PAK_TO252AA" value="IRFR5305" x="6.35" y="28.575" smashed="yes" rot="R90">
 <attribute name="VALUE" x="8.89" y="33.655" size="1.27" layer="27" rot="R180"/>
@@ -2897,7 +2877,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="20.8915" y="7.6835" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="23.59025" y="7.58825" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="R11" library="rcl" package="R0603" value="10k" x="6.985" y="4.7625" smashed="yes" rot="R180">
+<element name="R11" library="rcl" package="R0603" value="1,2k" x="6.985" y="4.7625" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.9535" y="4.318" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="7.62" y="6.6675" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -2929,81 +2909,57 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="8.5725" y="15.14475" size="0.4064" layer="25"/>
 <attribute name="VALUE" x="6.44525" y="13.7795" size="1.27" layer="27"/>
 </element>
-<element name="SCL" library="wirepad" package="SMD1,27-2,54" value="" x="13.97" y="2.54" smashed="yes">
-<attribute name="VALUE" x="13.97" y="2.54" size="0.0254" layer="27"/>
-<attribute name="NAME" x="12.865" y="3.67" size="0.4064" layer="25" rot="R270"/>
-</element>
-<element name="SDA" library="wirepad" package="SMD1,27-2,54" value="" x="11.43" y="2.54" smashed="yes">
-<attribute name="VALUE" x="11.43" y="2.54" size="0.0254" layer="27"/>
-<attribute name="NAME" x="10.325" y="3.035" size="0.4064" layer="25" rot="R270"/>
-</element>
 <element name="IC3" library="Oles komponentbibliotek" package="TQFN20-5X5" value="MAX31865" x="19.05" y="27.94" smashed="yes" rot="R180">
 <attribute name="VALUE" x="21.55" y="32.44" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="U$2" library="selfmade" package="SOT89" value="TS9011" x="3.175" y="12.065" smashed="yes"/>
-<element name="VCC_LCD" library="wirepad" package="SMD1,27-2,54" value="" x="8.89" y="2.54" smashed="yes">
-<attribute name="VALUE" x="8.89" y="2.54" size="0.0254" layer="27"/>
-<attribute name="NAME" x="7.658" y="3.8605" size="0.4064" layer="25" rot="R270"/>
-</element>
 <element name="XTAL" library="xtal" package="CS10" value="" x="24.22525" y="17.78" smashed="yes" rot="R270">
 <attribute name="NAME" x="25.3365" y="14.1605" size="0.4064" layer="25" ratio="16" rot="R180"/>
 <attribute name="VALUE" x="21.05025" y="21.082" size="1.27" layer="27" ratio="16" rot="R270"/>
 </element>
 <element name="BAT-" library="wirepad" package="4,16O1,6" value="" x="3.81" y="34.29" smashed="yes">
-<attribute name="VALUE" x="3.81" y="34.29" size="0.0254" layer="27"/>
 <attribute name="NAME" x="1.075" y="36.49" size="0.4064" layer="25"/>
-</element>
-<element name="RNTC" library="resistor" package="R1206" value="" x="14.95425" y="23.6855" smashed="yes">
-<attribute name="NAME" x="15.6845" y="24.73325" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="13.68425" y="21.1455" size="1.27" layer="27"/>
-</element>
-<element name="R12" library="rcl" package="R0603" value="5.6k" x="13.68425" y="8.35025" smashed="yes" rot="R90">
-<attribute name="NAME" x="14.7955" y="8.09625" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="16.22425" y="7.71525" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="3.81" y="34.29" size="0.0254" layer="27"/>
 </element>
 <element name="C7" library="rcl" package="C0603" value="100n" x="7.112" y="22.19325" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.73125" y="21.62175" size="0.4064" layer="25"/>
 <attribute name="VALUE" x="8.382" y="24.73325" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="USB_VCC" library="wirepad" package="SMD1,27-2,54" value="" x="2.54" y="5.08" smashed="yes" rot="R90">
-<attribute name="VALUE" x="2.54" y="5.08" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="3.67" y="4.28" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="2.54" y="5.08" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="USB_GND" library="wirepad" package="SMD1,27-2,54" value="" x="2.54" y="2.54" smashed="yes" rot="R90">
-<attribute name="VALUE" x="2.54" y="2.54" size="0.0254" layer="27" rot="R90"/>
 <attribute name="NAME" x="3.82875" y="1.64475" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="2.54" y="2.54" size="0.0254" layer="27" rot="R90"/>
 </element>
 <element name="RX" library="wirepad" package="SMD1,27-2,54" value="" x="21.59" y="2.54" smashed="yes">
-<attribute name="VALUE" x="21.59" y="2.54" size="0.0254" layer="27"/>
 <attribute name="NAME" x="20.485" y="3.67" size="0.4064" layer="25" rot="R270"/>
+<attribute name="VALUE" x="21.59" y="2.54" size="0.0254" layer="27"/>
 </element>
 <element name="TX" library="wirepad" package="SMD1,27-2,54" value="" x="24.13" y="2.54" smashed="yes">
-<attribute name="VALUE" x="24.13" y="2.54" size="0.0254" layer="27"/>
 <attribute name="NAME" x="23.025" y="3.67" size="0.4064" layer="25" rot="R270"/>
+<attribute name="VALUE" x="24.13" y="2.54" size="0.0254" layer="27"/>
 </element>
 <element name="DTR" library="wirepad" package="SMD1,27-2,54" value="" x="19.05" y="2.54" smashed="yes">
-<attribute name="VALUE" x="19.05" y="2.54" size="0.0254" layer="27"/>
 <attribute name="NAME" x="17.945" y="3.67" size="0.4064" layer="25" rot="R270"/>
+<attribute name="VALUE" x="19.05" y="2.54" size="0.0254" layer="27"/>
 </element>
 <element name="GND" library="wirepad" package="SMD1,27-2,54" value="" x="16.51" y="2.54" smashed="yes">
-<attribute name="VALUE" x="16.51" y="2.54" size="0.0254" layer="27"/>
 <attribute name="NAME" x="15.405" y="3.67" size="0.4064" layer="25" rot="R270"/>
+<attribute name="VALUE" x="16.51" y="2.54" size="0.0254" layer="27"/>
 </element>
 <element name="RTD1" library="wirepad" package="SMD1,27-2,54" value="" x="20.32" y="34.925" smashed="yes">
-<attribute name="VALUE" x="20.32" y="34.925" size="0.0254" layer="27"/>
 <attribute name="NAME" x="19.52" y="33.795" size="0.4064" layer="25" rot="R90"/>
+<attribute name="VALUE" x="20.32" y="34.925" size="0.0254" layer="27"/>
 </element>
 <element name="RTD2" library="wirepad" package="SMD1,27-2,54" value="" x="17.78" y="34.925" smashed="yes">
-<attribute name="VALUE" x="17.78" y="34.925" size="0.0254" layer="27"/>
 <attribute name="NAME" x="16.98" y="33.795" size="0.4064" layer="25" rot="R90"/>
+<attribute name="VALUE" x="17.78" y="34.925" size="0.0254" layer="27"/>
 </element>
 <element name="C8" library="rcl" package="C0603" value="100n" x="7.0485" y="17.30375" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.6615" y="16.906" size="0.4064" layer="25"/>
 <attribute name="VALUE" x="7.8485" y="18.95375" size="1.016" layer="27" rot="R180"/>
-</element>
-<element name="C9" library="rcl" package="C0603" value="100n" x="14.12875" y="25.43175" smashed="yes">
-<attribute name="NAME" x="14.50975" y="26.51125" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="13.49375" y="23.52675" size="1.27" layer="27"/>
 </element>
 <element name="C10" library="rcl" package="C0603" value="100n" x="22.225" y="12.065" smashed="yes" rot="R90">
 <attribute name="NAME" x="22.987" y="12.7" size="0.4064" layer="25" rot="R270"/>
@@ -3020,8 +2976,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C2" pad="1"/>
 <contactref element="R1" pad="1"/>
 <contactref element="BTN1" pad="1"/>
-<contactref element="VCC_LCD" pad="1"/>
-<contactref element="RNTC" pad="1"/>
 <contactref element="C7" pad="1"/>
 <wire x1="18.32" y1="17.24" x2="19.05" y2="16.51" width="0.3048" layer="1"/>
 <wire x1="19.05" y1="16.51" x2="20.7326" y2="16.51" width="0.3048" layer="1"/>
@@ -3034,7 +2988,6 @@ Please make sure your boards conform to these design rules.</description>
 <via x="17.78" y="13.97" extent="1-16" drill="0.3302"/>
 <wire x1="13.3985" y1="9.5885" x2="17.78" y2="13.97" width="0.6096" layer="16"/>
 <wire x1="17.78" y1="13.97" x2="19.05" y2="15.24" width="0.3048" layer="1"/>
-<wire x1="8.89" y1="2.54" x2="8.92175" y2="2.54" width="0.3048" layer="1"/>
 <wire x1="8.92175" y1="2.54" x2="10.19175" y2="3.84175" width="0.3048" layer="1"/>
 <via x="10.19175" y="3.84175" extent="1-16" drill="0.3302"/>
 <wire x1="24.13" y1="8.89" x2="24.13" y2="8.255" width="0.3048" layer="1"/>
@@ -3047,7 +3000,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="10.795" y1="17.78" x2="10.795" y2="18.415" width="0.3048" layer="1"/>
 <wire x1="10.795" y1="18.415" x2="10.795" y2="21.59" width="0.3048" layer="1"/>
 <wire x1="10.795" y1="21.59" x2="12.8905" y2="23.6855" width="0.3048" layer="1"/>
-<wire x1="12.8905" y1="23.6855" x2="13.53225" y2="23.6855" width="0.3048" layer="1"/>
 <wire x1="7.962" y1="22.19325" x2="7.99375" y2="22.225" width="0.3048" layer="1"/>
 <wire x1="7.99375" y1="22.225" x2="10.16" y2="22.225" width="0.3048" layer="1"/>
 <wire x1="10.16" y1="22.225" x2="10.795" y2="21.59" width="0.3048" layer="1"/>
@@ -3097,17 +3049,14 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="Q1" pad="4"/>
 <contactref element="R8" pad="2"/>
 <contactref element="R10" pad="2"/>
-<contactref element="GND_LCD" pad="1"/>
 <contactref element="IC2" pad="3"/>
 <contactref element="R11" pad="2"/>
 <contactref element="IC2" pad="1"/>
 <contactref element="BAT-" pad="1"/>
-<contactref element="R12" pad="1"/>
 <contactref element="C7" pad="2"/>
 <contactref element="USB_GND" pad="1"/>
 <contactref element="GND" pad="1"/>
 <contactref element="C8" pad="2"/>
-<contactref element="C9" pad="1"/>
 <via x="3.81" y="27.94" extent="1-16" drill="0.3302"/>
 <via x="3.81" y="30.48" extent="1-16" drill="0.3302"/>
 <via x="5.08" y="30.48" extent="1-16" drill="0.3302"/>
@@ -3253,10 +3202,6 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="A3_NTC">
 <contactref element="IC1" pad="26"/>
-<contactref element="RNTC" pad="2"/>
-<contactref element="R12" pad="2"/>
-<contactref element="C9" pad="2"/>
-<wire x1="13.68425" y1="9.20025" x2="13.804" y2="9.20025" width="0.3048" layer="1"/>
 <wire x1="13.804" y1="9.20025" x2="14.44625" y2="9.8425" width="0.3048" layer="1"/>
 <wire x1="14.44625" y1="9.8425" x2="14.44625" y2="10.88365" width="0.3048" layer="1"/>
 <wire x1="14.44625" y1="10.88365" x2="14.51" y2="10.9474" width="0.3048" layer="1"/>
@@ -3269,16 +3214,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="18.06575" y1="20.1295" x2="16.35125" y2="21.844" width="0.3048" layer="16"/>
 <via x="16.35125" y="21.844" extent="1-16" drill="0.3302"/>
 <wire x1="16.35125" y1="21.844" x2="16.35125" y2="22.9485" width="0.3048" layer="1"/>
-<wire x1="16.35125" y1="22.9485" x2="16.37625" y2="23.6855" width="0.3048" layer="1"/>
-<wire x1="14.97875" y1="25.43175" x2="15.39875" y2="25.43175" width="0.3048" layer="1"/>
-<wire x1="15.39875" y1="25.43175" x2="16.35125" y2="24.47925" width="0.3048" layer="1"/>
-<wire x1="16.35125" y1="24.47925" x2="16.35125" y2="23.7105" width="0.3048" layer="1"/>
-<wire x1="16.35125" y1="23.7105" x2="16.37625" y2="23.6855" width="0.3048" layer="1"/>
 </signal>
 <signal name="A4_SDA">
 <contactref element="IC1" pad="27"/>
-<contactref element="SDA" pad="1"/>
-<wire x1="11.43" y1="2.54" x2="11.43" y2="3.4925" width="0.3048" layer="1"/>
 <wire x1="11.43" y1="3.4925" x2="14.7955" y2="6.858" width="0.3048" layer="1"/>
 <wire x1="14.7955" y1="6.858" x2="14.7955" y2="7.65175" width="0.3048" layer="1"/>
 <wire x1="14.7955" y1="7.65175" x2="15.3035" y2="8.15975" width="0.3048" layer="1"/>
@@ -3287,8 +3225,6 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="A5_SCL">
 <contactref element="IC1" pad="28"/>
-<contactref element="SCL" pad="1"/>
-<wire x1="13.97" y1="2.54" x2="13.97" y2="5.08" width="0.3048" layer="1"/>
 <wire x1="13.97" y1="5.08" x2="15.46225" y2="6.57225" width="0.3048" layer="1"/>
 <wire x1="15.46225" y1="6.57225" x2="15.46225" y2="7.1755" width="0.3048" layer="1"/>
 <wire x1="15.46225" y1="7.1755" x2="16.129" y2="7.84225" width="0.3048" layer="1"/>
