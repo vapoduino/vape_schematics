@@ -2901,11 +2901,11 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="7.8105" y="24.5745" size="0.4064" layer="25"/>
 <attribute name="VALUE" x="6.477" y="21.81225" size="1.27" layer="27"/>
 </element>
-<element name="R8" library="rcl" package="R0603" value="10k" x="7.08025" y="18.89125" smashed="yes" rot="R180">
+<element name="R8" library="rcl" package="R0603" value="100k" x="7.08025" y="18.89125" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.5725" y="18.38325" size="0.4064" layer="25"/>
 <attribute name="VALUE" x="7.71525" y="20.79625" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R9" library="rcl" package="R0603" value="5k" x="7.08025" y="15.6845" smashed="yes">
+<element name="R9" library="rcl" package="R0603" value="51k" x="7.08025" y="15.6845" smashed="yes">
 <attribute name="NAME" x="8.5725" y="15.14475" size="0.4064" layer="25"/>
 <attribute name="VALUE" x="6.44525" y="13.7795" size="1.27" layer="27"/>
 </element>

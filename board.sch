@@ -13926,8 +13926,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="Q1" library="transistor-power" deviceset="IRF?5305" device="R"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0603" value="100k"/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R9" library="rcl" deviceset="R-EU_" device="R0603" value="5k"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="100k"/>
+<part name="R9" library="rcl" deviceset="R-EU_" device="R0603" value="51k"/>
 <part name="RAW2" library="supply1" deviceset="VCC" device="" value="VBAT"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
