@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.0.2">
+<eagle version="8.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -193,16 +193,6 @@
 </library>
 <library name="selfmade">
 <packages>
-<package name="SOT89">
-<wire x1="-2.25" y1="1.25" x2="-2.25" y2="-1.25" width="0.127" layer="21"/>
-<wire x1="-2.25" y1="-1.25" x2="2.25" y2="-1.25" width="0.127" layer="21"/>
-<wire x1="2.25" y1="-1.25" x2="2.25" y2="1.25" width="0.127" layer="21"/>
-<smd name="IN1" x="0" y="0.765" dx="3.81" dy="1.9304" layer="1" roundness="100" rot="R90"/>
-<wire x1="-2.25" y1="1.25" x2="2.25" y2="1.25" width="0.127" layer="21"/>
-<smd name="IN2" x="0" y="-1.8" dx="1.778" dy="0.9144" layer="1" rot="R90"/>
-<smd name="GND" x="-1.6" y="-1.8" dx="1.778" dy="0.9144" layer="1" rot="R90"/>
-<smd name="OUT" x="1.6" y="-1.8" dx="1.778" dy="0.9144" layer="1" rot="R90"/>
-</package>
 <package name="SOT-669">
 <wire x1="-5.02" y1="-2.75" x2="-5.02" y2="2.75" width="0.05" layer="39"/>
 <wire x1="-5.02" y1="2.75" x2="2.48" y2="2.75" width="0.05" layer="39"/>
@@ -256,15 +246,6 @@
 </package>
 </packages>
 <symbols>
-<symbol name="VOLTREG">
-<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
-<pin name="VIN" x="-15.24" y="5.08" visible="pin" length="middle" direction="pwr"/>
-<pin name="VOUT" x="15.24" y="5.08" visible="pin" length="middle" direction="pwr" rot="R180"/>
-<pin name="GND" x="0" y="-10.16" visible="pin" length="middle" direction="pwr" rot="R90"/>
-</symbol>
 <symbol name="N-CHANNEL">
 <wire x1="-1.1176" y1="2.413" x2="-1.1176" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-1.1176" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
@@ -308,23 +289,6 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TS9011">
-<gates>
-<gate name="G$1" symbol="VOLTREG" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT89">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="VIN" pad="IN1 IN2"/>
-<connect gate="G$1" pin="VOUT" pad="OUT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="PH2925U">
 <gates>
 <gate name="G$1" symbol="N-CHANNEL" x="-2.54" y="0"/>
@@ -14031,6 +13995,61 @@ FQP27P06 -
 </deviceset>
 </devicesets>
 </library>
+<library name="regulators">
+<packages>
+<package name="SOT-23-3">
+<description>SOT-23, 3-pin</description>
+<wire x1="1.524" y1="-0.762" x2="1.524" y2="0.762" width="0.127" layer="21"/>
+<wire x1="1.524" y1="0.762" x2="-1.524" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-1.524" y1="0.762" x2="-1.524" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-1.524" y1="-0.762" x2="1.524" y2="-0.762" width="0.127" layer="21"/>
+<smd name="2" x="0.9525" y="-1.27" dx="1.016" dy="1.397" layer="1" rot="R180"/>
+<smd name="1" x="-0.9525" y="-1.27" dx="1.016" dy="1.397" layer="1" rot="R180"/>
+<smd name="3" x="0" y="1.27" dx="1.016" dy="1.397" layer="1" rot="R180"/>
+<text x="-0.8255" y="-0.508" size="1.016" layer="21" ratio="12">&gt;NAME</text>
+<text x="-1.778" y="0.508" size="1.016" layer="21" ratio="12" rot="R180">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="3TERM_GND">
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.81" size="1.4224" layer="95">GND</text>
+<text x="-7.62" y="3.175" size="1.778" layer="95">&gt;VALUE</text>
+<text x="-7.62" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<pin name="IN" x="-12.7" y="0" length="middle" direction="pwr"/>
+<pin name="OUT" x="12.7" y="0" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="0" y="-10.16" visible="pad" length="middle" direction="pwr" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LM3480-*" prefix="U">
+<description>&lt;h3&gt;National Semiconductor LM3480&lt;/h3&gt;
+
+&lt;p&gt;100 mA, SOT-23, quasi-LDO linear regulator&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="3TERM_GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-3">
+<connects>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="IN" pad="2"/>
+<connect gate="G$1" pin="OUT" pad="1"/>
+</connects>
+<technologies>
+<technology name="12"/>
+<technology name="15"/>
+<technology name="3.3"/>
+<technology name="5.0"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14043,7 +14062,6 @@ FQP27P06 -
 <parts>
 <part name="VBAT" library="supply1" deviceset="VCC" device="" value="VBAT"/>
 <part name="VCC" library="supply1" deviceset="VCC" device="" value="VCC"/>
-<part name="U$2" library="selfmade" deviceset="TS9011" device=""/>
 <part name="C1" library="resistor" deviceset="CPOL-EU" device="CT7343" value="100µF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C1206" value="2µF"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
@@ -14103,6 +14121,9 @@ FQP27P06 -
 <part name="VCC3" library="supply1" deviceset="VCC" device="" value="VCC"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
+<part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="1K"/>
+<part name="LED3" library="wirepad" deviceset="SMD2" device=""/>
+<part name="U1" library="regulators" deviceset="LM3480-*" device="" technology="3.3"/>
 </parts>
 <sheets>
 <sheet>
@@ -14376,7 +14397,7 @@ FQP27P06 -
 <label x="198.12" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D9" class="0">
+<net name="D9_LED3" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="PB1(OC1A/PCINT1)"/>
 <wire x1="109.22" y1="63.5" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
@@ -14501,13 +14522,6 @@ FQP27P06 -
 <label x="114.3" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D7" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="PD7(AIN1/PCINT23)"/>
-<wire x1="109.22" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
-<label x="114.3" y="71.12" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="A2_CHRG_STBY" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="PC2(ADC2/PCINT10)"/>
@@ -14554,6 +14568,13 @@ FQP27P06 -
 <junction x="223.52" y="111.76"/>
 </segment>
 </net>
+<net name="D7" class="0">
+<segment>
+<pinref part="IC1" gate="1" pin="PD7(AIN1/PCINT23)"/>
+<wire x1="109.22" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
+<label x="114.3" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -14574,13 +14595,12 @@ FQP27P06 -
 <instances>
 <instance part="VBAT" gate="VCC" x="33.02" y="149.86"/>
 <instance part="VCC" gate="VCC" x="93.98" y="149.86"/>
-<instance part="U$2" gate="G$1" x="63.5" y="132.08"/>
 <instance part="C1" gate="G$1" x="40.64" y="132.08"/>
 <instance part="C2" gate="G$1" x="83.82" y="132.08"/>
 <instance part="GND1" gate="1" x="63.5" y="114.3"/>
 <instance part="GND7" gate="1" x="317.5" y="35.56"/>
-<instance part="R5" gate="G$1" x="309.88" y="55.88" rot="R180"/>
-<instance part="R6" gate="G$1" x="309.88" y="48.26" rot="R180"/>
+<instance part="R5" gate="G$1" x="309.88" y="63.5" rot="R180"/>
+<instance part="R6" gate="G$1" x="309.88" y="55.88" rot="R180"/>
 <instance part="Q1" gate="G$1" x="190.5" y="139.7"/>
 <instance part="GND8" gate="1" x="193.04" y="124.46"/>
 <instance part="R7" gate="G$1" x="182.88" y="132.08" rot="R90"/>
@@ -14592,8 +14612,8 @@ FQP27P06 -
 <instance part="IC2" gate="G$1" x="58.42" y="58.42"/>
 <instance part="GND11" gate="1" x="38.1" y="30.48"/>
 <instance part="R11" gate="G$1" x="35.56" y="45.72" rot="R270"/>
-<instance part="LED1" gate="1" x="325.12" y="55.88" rot="R180"/>
-<instance part="LED2" gate="1" x="325.12" y="48.26" rot="R180"/>
+<instance part="LED1" gate="1" x="325.12" y="63.5" rot="R180"/>
+<instance part="LED2" gate="1" x="325.12" y="55.88" rot="R180"/>
 <instance part="GND_LED" gate="1" x="325.12" y="40.64" smashed="yes" rot="R180">
 <attribute name="NAME" x="331.343" y="38.7858" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="326.263" y="43.942" size="1.778" layer="96" rot="R180"/>
@@ -14611,14 +14631,16 @@ FQP27P06 -
 <instance part="USB_GND" gate="1" x="17.78" y="48.26"/>
 <instance part="C8" gate="G$1" x="312.42" y="127"/>
 <instance part="R10" gate="G$1" x="172.72" y="137.16" rot="R180"/>
+<instance part="R12" gate="G$1" x="309.88" y="48.26" rot="R180"/>
+<instance part="LED3" gate="1" x="325.12" y="48.26" rot="R180"/>
+<instance part="U1" gate="G$1" x="63.5" y="137.16"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="VCC" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="VOUT"/>
-<wire x1="78.74" y1="137.16" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="137.16" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="137.16" x2="83.82" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="137.16" x2="93.98" y2="137.16" width="0.1524" layer="91"/>
@@ -14628,6 +14650,8 @@ FQP27P06 -
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="137.16" x2="93.98" y2="134.62" width="0.1524" layer="91"/>
 <junction x="93.98" y="137.16"/>
+<pinref part="U1" gate="G$1" pin="OUT"/>
+<junction x="76.2" y="137.16"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14638,8 +14662,7 @@ FQP27P06 -
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="63.5" y1="119.38" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="119.38" x2="83.82" y2="127" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="63.5" y1="121.92" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="127" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
 <junction x="63.5" y="119.38"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="63.5" y1="116.84" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
@@ -14650,6 +14673,8 @@ FQP27P06 -
 <wire x1="83.82" y1="119.38" x2="93.98" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="119.38" x2="93.98" y2="127" width="0.1524" layer="91"/>
 <junction x="83.82" y="119.38"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<junction x="63.5" y="127"/>
 </segment>
 <segment>
 <wire x1="317.5" y1="40.64" x2="317.5" y2="38.1" width="0.1524" layer="91"/>
@@ -14679,6 +14704,7 @@ FQP27P06 -
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="200.66" y1="50.8" x2="182.88" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="50.8" x2="182.88" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="BTN2" gate="1" pin="P"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
@@ -14712,7 +14738,7 @@ FQP27P06 -
 <net name="LED2" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="314.96" y1="48.26" x2="322.58" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="55.88" x2="322.58" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="LED2" gate="1" pin="P"/>
 </segment>
 </net>
@@ -14727,8 +14753,8 @@ FQP27P06 -
 <net name="D5_LED1" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="304.8" y1="55.88" x2="287.02" y2="55.88" width="0.1524" layer="91"/>
-<label x="287.02" y="55.88" size="1.778" layer="95"/>
+<wire x1="304.8" y1="63.5" x2="287.02" y2="63.5" width="0.1524" layer="91"/>
+<label x="287.02" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -14743,8 +14769,7 @@ FQP27P06 -
 <label x="88.9" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="VIN"/>
-<wire x1="48.26" y1="137.16" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="137.16" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="+"/>
 <wire x1="40.64" y1="137.16" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="134.62" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
@@ -14755,6 +14780,8 @@ FQP27P06 -
 <wire x1="33.02" y1="144.78" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="144.78" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
 <junction x="33.02" y="144.78"/>
+<pinref part="U1" gate="G$1" pin="IN"/>
+<junction x="50.8" y="137.16"/>
 </segment>
 </net>
 <net name="VUSB" class="0">
@@ -14789,8 +14816,8 @@ FQP27P06 -
 <net name="D6_LED2" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="304.8" y1="48.26" x2="287.02" y2="48.26" width="0.1524" layer="91"/>
-<label x="287.02" y="48.26" size="1.778" layer="95"/>
+<wire x1="304.8" y1="55.88" x2="287.02" y2="55.88" width="0.1524" layer="91"/>
+<label x="287.02" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A7_VSENS" class="0">
@@ -14812,7 +14839,7 @@ FQP27P06 -
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="LED1" gate="1" pin="P"/>
-<wire x1="314.96" y1="55.88" x2="322.58" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="63.5" x2="322.58" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D2_BUTTON" class="0">
@@ -14837,6 +14864,20 @@ FQP27P06 -
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="167.64" y1="137.16" x2="160.02" y2="137.16" width="0.1524" layer="91"/>
 <label x="154.94" y="137.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED3" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="1"/>
+<pinref part="LED3" gate="1" pin="P"/>
+<wire x1="322.58" y1="48.26" x2="314.96" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="D9_LED3" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="304.8" y1="48.26" x2="287.02" y2="48.26" width="0.1524" layer="91"/>
+<label x="287.02" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
