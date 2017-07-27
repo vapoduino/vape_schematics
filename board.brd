@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="yes" active="yes"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="yes" active="yes"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -144,6 +144,7 @@
 <wire x1="26.34" y1="33.645" x2="0" y2="33.645" width="0" layer="20"/>
 <wire x1="0" y1="33.645" x2="0" y2="0" width="0" layer="20"/>
 <text x="25.4" y="0.635" size="1.6764" layer="22" rot="MR0">Vapoduino_v0.2</text>
+<rectangle x1="5.207" y1="23.114" x2="9.779" y2="27.686" layer="16"/>
 </plain>
 <libraries>
 <library name="wirepad">
@@ -3508,9 +3509,29 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="COIL">
 <contactref element="COIL" pad="1"/>
 <contactref element="Q1" pad="5"/>
-<wire x1="9.23925" y1="30.44825" x2="9.23925" y2="27.13925" width="2.54" layer="1"/>
-<wire x1="9.23925" y1="27.13925" x2="7.88750625" y2="25.78750625" width="2.54" layer="1"/>
-<wire x1="7.5" y1="25.4" x2="7.88750625" y2="25.78750625" width="0" layer="19" extent="1-1"/>
+<wire x1="9.23925" y1="30.44825" x2="9.23925" y2="27.01225" width="3.81" layer="1"/>
+<wire x1="9.23925" y1="27.01225" x2="7.88750625" y2="25.78750625" width="2.54" layer="1"/>
+<wire x1="9.23925" y1="30.44825" x2="9.23925" y2="27.01925" width="3.81" layer="16"/>
+<wire x1="9.23925" y1="27.01925" x2="7.62" y2="25.4" width="2.54" layer="16"/>
+<via x="5.9055" y="27.1145" extent="1-16" drill="0.35"/>
+<via x="7.8105" y="27.1145" extent="1-16" drill="0.35"/>
+<via x="9.7155" y="27.1145" extent="1-16" drill="0.35"/>
+<via x="6.858" y="25.9715" extent="1-16" drill="0.35"/>
+<via x="8.763" y="25.9715" extent="1-16" drill="0.35"/>
+<via x="7.8105" y="24.5745" extent="1-16" drill="0.35"/>
+<via x="5.9055" y="24.5745" extent="1-16" drill="0.35"/>
+<via x="6.858" y="23.5585" extent="1-16" drill="0.35"/>
+<via x="8.763" y="23.5585" extent="1-16" drill="0.35"/>
+<wire x1="7.5" y1="25.4" x2="7.62" y2="25.4" width="0" layer="19" extent="1-16"/>
+<wire x1="9.7155" y1="27.1145" x2="9.23925" y2="27.01925" width="0" layer="19" extent="16-16"/>
+<wire x1="6.858" y1="25.9715" x2="7.5" y2="25.4" width="0" layer="19" extent="1-1"/>
+<wire x1="7.8105" y1="24.5745" x2="7.62" y2="25.4" width="0" layer="19" extent="16-16"/>
+<wire x1="8.763" y1="25.9715" x2="7.88750625" y2="25.78750625" width="0" layer="19" extent="1-1"/>
+<wire x1="7.8105" y1="27.1145" x2="7.88750625" y2="25.78750625" width="0" layer="19" extent="1-1"/>
+<wire x1="8.763" y1="23.5585" x2="7.8105" y2="24.5745" width="0" layer="19" extent="1-1"/>
+<wire x1="6.858" y1="23.5585" x2="7.8105" y2="24.5745" width="0" layer="19" extent="1-1"/>
+<wire x1="5.9055" y1="24.5745" x2="6.858" y2="23.5585" width="0" layer="19" extent="1-1"/>
+<wire x1="5.9055" y1="27.1145" x2="6.858" y2="25.9715" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 </signal>
