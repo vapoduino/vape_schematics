@@ -13995,55 +13995,102 @@ FQP27P06 -
 </deviceset>
 </devicesets>
 </library>
-<library name="regulators">
+<library name="linear" urn="urn:adsk.eagle:library:262">
+<description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
+Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="SOT-23-3">
-<description>SOT-23, 3-pin</description>
-<wire x1="1.524" y1="-0.762" x2="1.524" y2="0.762" width="0.127" layer="21"/>
-<wire x1="1.524" y1="0.762" x2="-1.524" y2="0.762" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="0.762" x2="-1.524" y2="-0.762" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="-0.762" x2="1.524" y2="-0.762" width="0.127" layer="21"/>
-<smd name="2" x="0.9525" y="-1.27" dx="1.016" dy="1.397" layer="1" rot="R180"/>
-<smd name="1" x="-0.9525" y="-1.27" dx="1.016" dy="1.397" layer="1" rot="R180"/>
-<smd name="3" x="0" y="1.27" dx="1.016" dy="1.397" layer="1" rot="R180"/>
-<text x="-0.8255" y="-0.508" size="1.016" layer="21" ratio="12">&gt;NAME</text>
-<text x="-1.778" y="0.508" size="1.016" layer="21" ratio="12" rot="R180">&gt;VALUE</text>
+<package name="SOT223" library_version="1">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
+<wire x1="3.2766" y1="1.778" x2="3.2766" y2="-1.778" width="0.2032" layer="21"/>
+<wire x1="3.2766" y1="-1.778" x2="-3.2766" y2="-1.778" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="-1.778" x2="-3.2766" y2="1.778" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="1.778" x2="3.2766" y2="1.778" width="0.2032" layer="21"/>
+<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
+<text x="1.0208" y="-4.318" size="0.8128" layer="21" ratio="12">3</text>
+<text x="1.905" y="2.54" size="0.8128" layer="21" ratio="12">4</text>
+<text x="-3.4526" y="-4.318" size="0.8128" layer="21" ratio="12">1</text>
+<text x="-1.2906" y="-4.3274" size="0.8128" layer="21" ratio="12">2</text>
+<text x="-2.54" y="0.0508" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-1.3208" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+</package>
+<package name="SOT23" library_version="1">
+<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
+reflow soldering</description>
+<wire x1="-1.973" y1="1.983" x2="1.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="-1.983" x2="-1.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="-1.973" y1="-1.983" x2="-1.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="1.983" x2="1.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.66" width="0.1524" layer="51"/>
+<wire x1="1.422" y1="-0.66" x2="-1.422" y2="-0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.66" x2="-1.422" y2="0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.152" x2="-1.422" y2="0.66" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.66" x2="-0.864" y2="0.66" width="0.1524" layer="21"/>
+<wire x1="0.864" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.152" width="0.1524" layer="21"/>
+<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
+<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
+<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+<rectangle x1="-0.5001" y1="-0.3" x2="0.5001" y2="0.3" layer="35"/>
 </package>
 </packages>
 <symbols>
-<symbol name="3TERM_GND">
-<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
-<text x="-1.905" y="-3.81" size="1.4224" layer="95">GND</text>
-<text x="-7.62" y="3.175" size="1.778" layer="95">&gt;VALUE</text>
+<symbol name="78XX" library_version="1">
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.4064" layer="94"/>
 <text x="-7.62" y="5.715" size="1.778" layer="95">&gt;NAME</text>
-<pin name="IN" x="-12.7" y="0" length="middle" direction="pwr"/>
-<pin name="OUT" x="12.7" y="0" length="middle" direction="pwr" rot="R180"/>
-<pin name="GND" x="0" y="-10.16" visible="pad" length="middle" direction="pwr" rot="R90"/>
+<text x="-7.62" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.032" y="-4.318" size="1.524" layer="95">GND</text>
+<pin name="VI" x="-10.16" y="0" length="short" direction="in"/>
+<pin name="GND" x="0" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="VO" x="10.16" y="0" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LM3480-*" prefix="U">
-<description>&lt;h3&gt;National Semiconductor LM3480&lt;/h3&gt;
-
-&lt;p&gt;100 mA, SOT-23, quasi-LDO linear regulator&lt;/p&gt;</description>
+<deviceset name="MCP1703" prefix="IC" library_version="1">
+<description>&lt;b&gt;250 mA, 16V, Low Quiescent Current LDO Regulator&lt;/b&gt;&lt;p&gt;
+Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <gates>
-<gate name="G$1" symbol="3TERM_GND" x="0" y="0"/>
+<gate name="G$1" symbol="78XX" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SOT-23-3">
+<device name="DB" package="SOT223">
 <connects>
-<connect gate="G$1" pin="GND" pad="3"/>
-<connect gate="G$1" pin="IN" pad="2"/>
-<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="VI" pad="1"/>
+<connect gate="G$1" pin="VO" pad="3"/>
 </connects>
 <technologies>
-<technology name="12"/>
-<technology name="15"/>
-<technology name="3.3"/>
-<technology name="5.0"/>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CB" package="SOT23">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="VI" pad="3"/>
+<connect gate="G$1" pin="VO" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -14123,7 +14170,7 @@ FQP27P06 -
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
 <part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="1K"/>
 <part name="LED3" library="wirepad" deviceset="SMD2" device=""/>
-<part name="U1" library="regulators" deviceset="LM3480-*" device="" technology="3.3"/>
+<part name="IC4" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="MCP1703" device="CB"/>
 </parts>
 <sheets>
 <sheet>
@@ -14157,7 +14204,7 @@ FQP27P06 -
 <instance part="C10" gate="G$1" x="30.48" y="83.82" rot="R90"/>
 <instance part="GND14" gate="1" x="25.4" y="78.74"/>
 <instance part="C11" gate="G$1" x="30.48" y="91.44" rot="R90"/>
-<instance part="Q2" gate="G$1" x="223.52" y="127"/>
+<instance part="Q2" gate="G$1" x="223.52" y="127" rot="MR180"/>
 <instance part="VCC3" gate="VCC" x="223.52" y="137.16"/>
 <instance part="R4" gate="G$1" x="205.74" y="119.38" rot="R270"/>
 </instances>
@@ -14193,9 +14240,9 @@ FQP27P06 -
 <junction x="38.1" y="91.44"/>
 </segment>
 <segment>
-<pinref part="Q2" gate="G$1" pin="D"/>
+<pinref part="Q2" gate="G$1" pin="S"/>
 <pinref part="VCC3" gate="VCC" pin="VCC"/>
-<wire x1="223.52" y1="134.62" x2="223.52" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="132.08" x2="223.52" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14562,10 +14609,8 @@ FQP27P06 -
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="215.9" y1="111.76" x2="223.52" y2="111.76" width="0.1524" layer="91"/>
 <junction x="223.52" y="109.22"/>
-<wire x1="223.52" y1="121.92" x2="223.52" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="S"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="223.52" y1="111.76" x2="223.52" y2="121.92" width="0.1524" layer="91"/>
-<junction x="223.52" y="111.76"/>
 </segment>
 </net>
 <net name="D7" class="0">
@@ -14633,14 +14678,14 @@ FQP27P06 -
 <instance part="R10" gate="G$1" x="172.72" y="137.16" rot="R180"/>
 <instance part="R12" gate="G$1" x="309.88" y="48.26" rot="R180"/>
 <instance part="LED3" gate="1" x="325.12" y="48.26" rot="R180"/>
-<instance part="U1" gate="G$1" x="63.5" y="137.16"/>
+<instance part="IC4" gate="G$1" x="63.5" y="137.16"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="VCC" class="0">
 <segment>
-<wire x1="76.2" y1="137.16" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="137.16" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="137.16" x2="83.82" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="137.16" x2="93.98" y2="137.16" width="0.1524" layer="91"/>
@@ -14650,8 +14695,7 @@ FQP27P06 -
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="137.16" x2="93.98" y2="134.62" width="0.1524" layer="91"/>
 <junction x="93.98" y="137.16"/>
-<pinref part="U1" gate="G$1" pin="OUT"/>
-<junction x="76.2" y="137.16"/>
+<pinref part="IC4" gate="G$1" pin="VO"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14662,7 +14706,7 @@ FQP27P06 -
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="63.5" y1="119.38" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="119.38" x2="83.82" y2="127" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="127" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="129.54" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
 <junction x="63.5" y="119.38"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="63.5" y1="116.84" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
@@ -14673,8 +14717,7 @@ FQP27P06 -
 <wire x1="83.82" y1="119.38" x2="93.98" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="119.38" x2="93.98" y2="127" width="0.1524" layer="91"/>
 <junction x="83.82" y="119.38"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<junction x="63.5" y="127"/>
+<pinref part="IC4" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="317.5" y1="40.64" x2="317.5" y2="38.1" width="0.1524" layer="91"/>
@@ -14769,7 +14812,7 @@ FQP27P06 -
 <label x="88.9" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="50.8" y1="137.16" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="137.16" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="+"/>
 <wire x1="40.64" y1="137.16" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="134.62" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
@@ -14780,8 +14823,7 @@ FQP27P06 -
 <wire x1="33.02" y1="144.78" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="144.78" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
 <junction x="33.02" y="144.78"/>
-<pinref part="U1" gate="G$1" pin="IN"/>
-<junction x="50.8" y="137.16"/>
+<pinref part="IC4" gate="G$1" pin="VI"/>
 </segment>
 </net>
 <net name="VUSB" class="0">
@@ -14885,4 +14927,11 @@ FQP27P06 -
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="8.2" severity="warning">
+Since Version 8.2, Eagle supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+</compatibility>
 </eagle>
