@@ -8,7 +8,7 @@ The heat emitted by the heating wire is controled using a PH2925U mosfet.
 There still are a lot of errors in this schematics, but you will get the general idea...
 
 ## Firmware
-The Firmware can be found at [acidg/vape_firmware_arduino](https://github.com/acidg/vape_firmware_arduino)
+The Firmware can be found at [vapoduino/vape_firmware_arduino](https://github.com/vapoduino/vape_firmware_arduino)
 
 ## Model 
-The model can be found at [acidg/vape_model](https://github.com/acidg/vape_model)
+The model can be found at [vapoduino/vape_model](https://github.com/vapoduino/vape_model)
